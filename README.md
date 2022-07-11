@@ -18,7 +18,7 @@ With SmallInteger however, this utilizes a dynamicly resized byte array to store
  - .compareTo() returns -1,0,1 if compared number is smaller, equal or larger.
  - .toInteger() returns number as Integer if number does not exceed INTEGER.MAXIMUM
  - .carry() iterates linearly over array and starts from last index, carries numbers >10 to coresponding neighbour, this is done after adding or during runtime with multiplication.
- - 
+ 
   <b>Math Methods:</b>
   These methods are initiated by a call to the method and a switch will switch between different experimental algorithms (will be simplified in later releases)
   - .add()
