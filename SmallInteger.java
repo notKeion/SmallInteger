@@ -1,6 +1,31 @@
 import java.util.Arrays;
 
 public class SmallInteger implements Comparable<SmallInteger>{
+	/*
+	 * Copyright (c) 2022, Keion Vergara. All rights reserved.
+	 * Do not remove copyright header!
+	 * 
+	 * This code is a revision to the Java BigInteger class. 
+	 * Code may be altered, branched and commited to prehaps 
+	 * improve this project. People may use this class in any
+	 * non-commercial setting, if however it is, please
+	 * contact the original creator Keion Vergara.
+	 * 
+	 * @see SmallLibrary
+	 * @author Keion Vergara
+	 * @contact keionv11@gmail.com
+	 */
+
+	/*
+	 * For whome has made it to my Git Repository, 
+	 * Please note that by the time you read this its not my finest work.
+	 * With ours of speed optimizations, code simplifications and endless random bugs,
+	 * the total amount of wasted hours = 65.
+	 * You're brave, and your intent with this API to each their own, however,
+	 * with such a ridiculous magnitude of possible digits and a slim use case,
+	 * I wish you best of luck.
+	 */
+
 	private byte nums[]; // Most Significant digit starts at index 0, used as digite store
 	private boolean POSITIVE = true; // Determines if num is negative; **EXPERIMENTAL NOT STABLE**
 	
