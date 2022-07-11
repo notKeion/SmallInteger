@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class SmallInteger extends Timer implements Comparable<SmallInteger>{
+public class SmallInteger implements Comparable<SmallInteger>{
     
     public static enum Method {TRADITIONAL,SHIFT,KEION,SLOW}; // WHICH METHOD TO USE DURING MATH OPERATIONS (KEION&SHIFT WORK BEST)
     
@@ -44,7 +44,6 @@ public class SmallInteger extends Timer implements Comparable<SmallInteger>{
     	String coefficient = "";
     	
     	int digitPlace = 0;
-    	
     	for(int i = 0; i < nums.length; i++) {
     		if(i>=10) break;
     		coefficient+=nums[i];
@@ -229,26 +228,6 @@ public class SmallInteger extends Timer implements Comparable<SmallInteger>{
 		//verbPrint("Array sum " + (idx-1) + " times");
 		
 	}
-	// Experimental***Stable
-	// Rather than affecting object, this (Future) static method will return the sum between two small Integers.
-	private SmallInteger shiftAdd(SmallInteger a, SmallInteger b) {
-		SmallInteger t = new SmallInteger(Arrays.copyOf(a.nums, numCarry));
-		
-		//SHIFT
-		if(b.length() >= t.length()) 
-			this.shiftLeft(b.length() - t.length() + 2);
-		int idx = 1;
-		//ADD
-		while(idx <= b.length() ) {
-			t.nums[t.length()-idx] += b.nums[b.length()-idx];
-			idx++;
-		}
-		//CARRY
-		t.carry(t.length()-1, t.length()-b.length()-2);
-		//RETURN
-		return t;
-		
-	}
 	
 	//Subtraction Algorithms
 	private void keionSubtract(SmallInteger g) { 
@@ -389,7 +368,6 @@ public class SmallInteger extends Timer implements Comparable<SmallInteger>{
 	}
 	public void carry(int idx, int end) {
 		//if(verbose) verbPrint("Carrying digit \'"+(nums[idx] / 10)+ "\' from index["+idx+"/"+(length()-1)+"]: "+this.toString());
-		super.numCarry++;
 		if(idx == 0 || idx == end) return;
 		
 		if(nums[idx] < 10 && nums[idx] >= 0){
@@ -410,7 +388,6 @@ public class SmallInteger extends Timer implements Comparable<SmallInteger>{
 		carry(idx-1, end);
 	}
 	private void carry(byte[] array, int idx, int end) {
-		super.numCarry++;
 		//if(verbose) System.out.println("Carrying digit \'"+(array[idx] / 10)+ "\' from index["+idx+"/"+(array.length-1)+"]: ");
 		if(idx == 0 || idx == end) return;
 		if(array[idx] < 10 ) {
