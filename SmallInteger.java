@@ -19,10 +19,10 @@ public class SmallInteger implements Comparable<SmallInteger>{
 	/*
 	 * For whome has made it to my Git Repository, 
 	 * Please note that by the time you read this its not my finest work.
-	 * With ours of speed optimizations, code simplifications and endless random bugs,
+	 * With hours of speed optimizations, code simplifications and endless random bugs,
 	 * the total amount of wasted hours = 65.
 	 * You're brave, and your intent with this API to each their own, however,
-	 * with such a ridiculous magnitude of possible digits and a slim use case,
+	 * with such a ridiculous magnitude of possible digits and a slim use-case,
 	 * I wish you best of luck.
 	 */
 
